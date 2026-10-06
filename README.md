@@ -117,9 +117,9 @@ same packets works. Without it FocusGuard still does everything except password 
    (`keyboards/ducky/one2sf/1967st/ansi/keymaps/illixion`) run `tools/fg-provision.sh`. It
    creates a 256-bit key in your login Keychain (`com.illixion.focusguard.keyboard`) that only
    FocusGuard can read without asking.
-3. Run `tools/fg-flash.sh`. It reads the key (approve the Keychain prompt), builds the firmware
-   in a private temporary directory, asks you to put the keyboard in bootloader mode (unplug,
-   hold D+L, plug in), flashes it and deletes every build file.
+3. Run `tools/fg-flash.sh`. It reads the key (choose **Allow**, not *Always Allow*), builds the firmware
+   in a private temporary directory, waits for the keyboard to appear in bootloader mode
+   (unplug it, hold D+L, plug it back in), flashes it and deletes every build file.
 4. Relaunch FocusGuard and choose *Always Allow* when macOS asks about the Keychain item. The menu
    then shows *Keyboard relay: ready*.
 
